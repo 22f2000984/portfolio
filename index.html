@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hemendra | Developer Portfolio</title>
+
+<style>
+:root {
+  --bg: #0f172a;
+  --text: #f1f5f9;
+  --card: #1e293b;
+  --accent: #38bdf8;
+}
+
+.light-mode {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --card: #e2e8f0;
+}
+
+* {margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+body {background:var(--bg); color:var(--text); scroll-behavior:smooth;}
+
+header {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:20px 8%; background:var(--card); position:sticky; top:0;
+}
+
+nav a {
+  margin-left:20px; text-decoration:none; color:var(--text); font-weight:bold;
+}
+
+nav a:hover {color:var(--accent);}
+
+.toggle-btn {
+  background:var(--accent); border:none; padding:8px 12px;
+  border-radius:5px; cursor:pointer; font-weight:bold;
+}
+
+section {padding:70px 8%;}
+.hero {text-align:center; padding-top:120px;}
+.hero h2 {font-size:2.7rem; color:var(--accent);}
+.hero p {margin-top:10px;}
+
+.btn {
+  display:inline-block; margin-top:20px; padding:10px 20px;
+  background:var(--accent); color:black; border-radius:5px;
+  text-decoration:none; font-weight:bold;
+}
+
+.projects-grid, .skills-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px; margin-top:30px;
+}
+
+.card {
+  background:var(--card); padding:20px; border-radius:10px;
+  transition:0.3s;
+}
+
+.card:hover {transform:translateY(-6px);}
+
+.skill-bar {
+  margin-top:10px; height:8px; background:#334155;
+  border-radius:5px; overflow:hidden;
+}
+
+.skill-bar span {
+  display:block; height:100%; background:var(--accent);
+}
+
+footer {text-align:center; padding:20px; background:var(--card);}
+input, textarea {width:100%; padding:10px; margin-top:10px; border:none; border-radius:5px;}
+button {margin-top:10px; padding:10px; border:none; background:var(--accent); font-weight:bold; border-radius:5px;}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Hemendra</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="toggle-btn" onclick="toggleMode()">🌙</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Hi, I'm Hemendra 👋</h2>
+  <p>Python | Flask | JavaScript | Vue | Java | Networking</p>
+  <a href="resume.pdf" class="btn" download>Download Resume</a>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I build web applications using Flask and JavaScript frameworks. 
+    I enjoy backend logic, networking concepts, and solving real-world problems through technology.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills-grid">
+    <div class="card">
+      <h3>Python / Flask</h3>
+      <div class="skill-bar"><span style="width:90%"></span></div>
+    </div>
+    <div class="card">
+      <h3>JavaScript / Vue</h3>
+      <div class="skill-bar"><span style="width:85%"></span></div>
+    </div>
+    <div class="card">
+      <h3>Java</h3>
+      <div class="skill-bar"><span style="width:75%"></span></div>
+    </div>
+    <div class="card">
+      <h3>Networking</h3>
+      <div class="skill-bar"><span style="width:80%"></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="card">
+      <h3>Flask Web App</h3>
+      <p>Backend-driven web application with authentication and REST APIs.</p>
+    </div>
+    <div class="card">
+      <h3>Network Monitoring Tool</h3>
+      <p>Python-based tool to monitor network devices and performance.</p>
+    </div>
+    <div class="card">
+      <h3>Vue Dashboard</h3>
+      <p>Interactive dashboard with charts and real-time updates.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Hemendra | Developer Portfolio</p>
+</footer>
+
+<script>
+function toggleMode() {
+  document.body.classList.toggle("light-mode");
+}
+</script>
+
+</body>
+</html>
