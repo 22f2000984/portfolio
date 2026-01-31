@@ -19,6 +19,21 @@
   --card: #e2e8f0;
 }
 
+.circle-image {
+  /* 1. Define the size (small) */
+  width: 50px;  /* Set desired width */
+  height: 50px; /* Set desired height */
+  
+  /* Make sure the image covers the area without stretching */
+  object-fit: cover; 
+  
+  /* 2. Create the circle shape */
+  border-radius: 50%; /* This makes the element perfectly circular */
+
+  /* Optional: Add a border for better visual definition */
+  border: 2px solid #ddd;
+}
+
 * {margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
 body {background:var(--bg); color:var(--text); scroll-behavior:smooth;}
 
@@ -79,14 +94,19 @@ button {margin-top:10px; padding:10px; border:none; background:var(--accent); fo
 <body>
 
 <header>
+    <!-- <img src="hemendra.png" alt="My Website Logo" class="circle-image"> -->
   <h1>Hemendra Kr Sharma</h1>
+  <!-- <img src="hemendra.png" alt="My Website Logo"> -->
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-    <button class="toggle-btn" onclick="toggleMode()">🌙</button>
+    <!-- <button class="toggle-btn" onclick="toggleMode()">🌙</button> -->
+     <!-- <button class="toggle-btn" onclick="toggleMode()"><img src="hemendra.png" alt="My Website Logo" class="circle-image"></button> -->
+     <!-- <img src="hemendra.png" alt="My Website Logo" class="circle-image"> -->
   </nav>
+  <img src="hemendra.png" alt="My Website Logo" class="circle-image">
 </header>
 
 <section class="hero">
