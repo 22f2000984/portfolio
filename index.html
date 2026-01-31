@@ -49,8 +49,19 @@ nav a {
 nav a:hover {color:var(--accent);}
 
 .toggle-btn {
-  background:var(--accent); border:none; padding:8px 12px;
-  border-radius:5px; cursor:pointer; font-weight:bold;
+  /* background:var(--accent); border:none; padding:8px 12px;
+  border-radius:5px; cursor:pointer; font-weight:bold; */
+  /* 1. Define the size (small) */
+    width: 50px; /* Same width and height */
+    height: 50px;
+    border-radius: 50%; /* Makes it circular */
+    background-image: url('Hemendra.png'); /* Set the image */
+    background-size: cover; /* Resizes the background image to cover the entire container */
+    background-position: center; /* Centers the image within the container */
+    border: none; /* Removes the default button border */
+    cursor: pointer; /* Changes the cursor to a hand pointer */
+    /* Add hover effects for better user experience */
+    transition: transform 0.2s;
 }
 
 section {padding:70px 8%;}
@@ -103,10 +114,11 @@ button {margin-top:10px; padding:10px; border:none; background:var(--accent); fo
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
     <!-- <button class="toggle-btn" onclick="toggleMode()">🌙</button> -->
+     <button class="toggle-btn" onclick="toggleMode()"></button>
      <!-- <button class="toggle-btn" onclick="toggleMode()"><img src="hemendra.png" alt="My Website Logo" class="circle-image"></button> -->
      <!-- <img src="hemendra.png" alt="My Website Logo" class="circle-image"> -->
   </nav>
-  <img src="Hemendra.PNG" alt="My Website Logo" class="circle-image">
+  <!-- <img src="Hemendra.PNG" alt="My Website Logo" class="circle-image"> -->
 </header>
 
 <section class="hero">
