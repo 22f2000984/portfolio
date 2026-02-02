@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hemendra Kr Sharma| Developer Portfolio</title>
+
+<style>
+:root {
+  --bg: #0f172a;
+  --text: #f1f5f9;
+  --card: #1e293b;
+  --accent: #38bdf8;
+}
+
+.light-mode {
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --card: #e2e8f0;
+}
+
+.circle-image {
+  /* 1. Define the size (small) */
+  width: 50px;  /* Set desired width */
+  height: 50px; /* Set desired height */
+  
+  /* Make sure the image covers the area without stretching */
+  object-fit: cover; 
+  
+  /* 2. Create the circle shape */
+  border-radius: 50%; /* This makes the element perfectly circular */
+
+  /* Optional: Add a border for better visual definition */
+  border: 2px solid #ddd;
+}
+
+* {margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+body {background:var(--bg); color:var(--text); scroll-behavior:smooth;}
+
+header {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:20px 8%; background:var(--card); position:sticky; top:0;
+}
+
+nav a {
+  margin-left:20px; text-decoration:none; color:var(--text); font-weight:bold;
+}
+
+nav a:hover {color:var(--accent);}
+
+.toggle-btn {
+  /* background:var(--accent); border:none; padding:8px 12px;
+  border-radius:5px; cursor:pointer; font-weight:bold; */
+  /* 1. Define the size (small) */
+    width: 50px; /* Same width and height */
+    height: 50px;
+    border-radius: 50%; /* Makes it circular */
+    background-image: url('Hemendra.PNG'); /* Set the image */
+    background-size: cover; /* Resizes the background image to cover the entire container */
+    background-position: center; /* Centers the image within the container */
+    border: none; /* Removes the default button border */
+    cursor: pointer; /* Changes the cursor to a hand pointer */
+    /* Add hover effects for better user experience */
+    transition: transform 0.2s;
+}
+
+section {padding:70px 8%;}
+.hero {text-align:center; padding-top:120px;}
+.hero h2 {font-size:2.7rem; color:var(--accent);}
+.hero p {margin-top:10px;}
+.aboutme h2{font-size:2.7rem; color:var(--accent);}
+
+.btn {
+  display:inline-block; margin-top:20px; padding:10px 20px;
+  background:var(--accent); color:black; border-radius:5px;
+  text-decoration:none; font-weight:bold;
+}
+
+.projects-grid, .skills-grid {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px; margin-top:30px;
+}
+
+.card {
+  background:var(--card); padding:20px; border-radius:10px;
+  transition:0.3s;
+}
+
+.card:hover {transform:translateY(-6px);}
+
+.skill-bar {
+  margin-top:10px; height:8px; background:#334155;
+  border-radius:5px; overflow:hidden;
+}
+
+.skill-bar span {
+  display:block; height:100%; background:var(--accent);
+}
+.video-container {
+    /* Define the size of your 'frame' */
+    width: 600px; /* or a percentage, e.g., 50% */
+    height: auto; /* Maintain aspect ratio */
+    
+    /* Optional: Add visual framing */
+    border: 2px solid #333;
+    padding: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Ensure the video scales perfectly to fit its container */
+video {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below the video */
+    margin: 0 auto; /* Center the video within the container */
+}
+
+footer {text-align:center; padding:20px; background:var(--card);}
+input, textarea {width:60%; padding:10px; margin-top:10px; border:none; border-radius:5px;}
+button {margin-top:10px; padding:10px; border:none; background:var(--accent); font-weight:bold; border-radius:5px;}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+<h4 style="background-color: white;color: black;background-image: url(backgnd.jpg);">Conatct at +91-9769494927</h4>
+<header>
+    <!-- <img src="hemendra.png" alt="My Website Logo" class="circle-image"> -->
+  <h1>Hemendra Kr Sharma</h1>
+  <!-- <img src="hemendra.png" alt="My Website Logo"> -->
+  <nav>
+    <a href="/portfolio/index.html">Home</a>
+    <a href="/portfolio/about.html">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <!-- <button class="toggle-btn" onclick="toggleMode()">🌙</button> -->
+     <button class="toggle-btn" onclick="toggleMode()"></button>
+     <!-- <button class="toggle-btn" onclick="toggleMode()"><img src="hemendra.png" alt="My Website Logo" class="circle-image"></button> -->
+     <!-- <img src="hemendra.png" alt="My Website Logo" class="circle-image"> -->
+  </nav>
+  <!-- <img src="Hemendra.PNG" alt="My Website Logo" class="circle-image"> -->
+</header>
+
+<section class="aboutme" style="background-color: white; background-image: url(backgnd.jpg);">
+    <h1 style="color:black;">Vehicle Parking Application</h1>
+    <div class="video-container">
+        <h3 style="color:black;">Part-1</h3>
+        <!-- The video element itself -->
+        <video controls width="100%">
+            <!-- Source file for the video -->
+            <source src="Vehicle Parking App Part1 Admin Dashboard.mp4" type="video/mp4">
+            
+            <!-- Fallback text for browsers that don't support the video tag -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+
+
+
+<!-- <footer>
+  <p>© 2026 Hemendra | Developer Portfolio</p>
+</footer> -->
+
+<script>
+function toggleMode() {
+  document.body.classList.toggle("light-mode");
+}
+</script>
+
+</body>
+<footer>
+  <p>© 2026 Hemendra | Developer Portfolio</p>
+</footer>
+
+</html>
